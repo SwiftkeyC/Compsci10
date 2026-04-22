@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compsci10 - Practice</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="photos/UoM.svg">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">
+                <img class="brand-logo" src="photos/brand-logo.svg" data-icon-dark="photos/brand-logo.svg" data-icon-light="photos/brand-logo Ligth.svg" alt="Home">
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="Learn.html">
+                <img src="photos/BookDark.png" data-icon-dark="photos/BookDark.png" data-icon-light="photos/BookLight.png" alt="Learn">
+                <div class="learn-class">Learn</div>
+            </a>
+            <a href="Examples.html">
+                <img src="photos/BookmarkDark.png" data-icon-dark="photos/BookmarkDark.png" data-icon-light="photos/BookmarkLight.png" alt="Examples">
+                <div class="examples-class">Examples</div>
+            </a>
+            <a href="Practice.html">
+                <img src="photos/LoaderDark.png" data-icon-dark="photos/LoaderDark.png" data-icon-light="photos/LoaderLight.png" alt="Practice">
+                <div class="practice-class">Practice</div>
+            </a>
+            <a href="Our-Experience.html">
+                <img src="photos/SmileDark.png" data-icon-dark="photos/SmileDark.png" data-icon-light="photos/SmileLigt.png" alt="Our Experience">
+                <div class="experience-class">Our Experience</div>
+            </a>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 15.5C18.8 16.1 17.5 16.4 16.2 16.4C11.5 16.4 7.6 12.5 7.6 7.8C7.6 6.5 7.9 5.2 8.5 4C5.2 5.3 3 8.4 3 12C3 16.4 6.6 20 11 20C14.6 20 17.7 17.8 20 15.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 3V5.5M12 18.5V21M3 12H5.5M18.5 12H21M5.6 5.6L7.4 7.4M16.6 16.6L18.4 18.4M18.4 5.6L16.6 7.4M7.4 16.6L5.6 18.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </nav>
+
+    <main class="hero">
+        <h1>Practice</h1>
+        <h3>Please select an answer and click submit.</h3>
+            <h2>Question 1</h2>
+
+    <div class="card question" data-correct="b"> <!--start of the questions, correct answer is b which i have set-->
+        <p>What algorithm starts by dividing the search interval in half?</p>
+
+        <label class="option">
+            <input type="radio" name="q1" value="a">
+            Linear Search
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="b">
+            Binary Search
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="c">
+            Bubble Sort
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="d">
+            None of the Options
+        </label>
+
+        <button class="submit">Submit</button>
+        <p class="result"></p>
+    </div>
+
+    
+            <h2>Question 2</h2>
+
+    <div class="card question" data-correct="d"> 
+        <p>What algorithm swaps adjacent elements if the are in the wrong order? </p>
+
+        <label class="option">
+            <input type="radio" name="q1" value="a">
+            Merge Sort
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="b">
+            Binary Search
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="c">
+            Insertion Sort
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="d">
+            Bubble Sort
+        </label>
+
+        <button class="submit">Submit</button>
+        <p class="result"></p>
+    </div>
+        
+    <h2>Question 3</h2>
+
+    <div class="card question" data-correct="b"> 
+        <p>What is the main disadvantage of linear search compared to binary search? </p>
+
+        <label class="option">
+            <input type="radio" name="q1" value="a">
+            It finds the element faster.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="b">
+            It is slower with large datasets.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="c">
+            It requires sorting.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="d">
+            It uses more memory.
+        </label>
+
+        <button class="submit">Submit</button>
+        <p class="result"></p>
+    </div>
+
+    <h2>Question 4</h2>
+
+    <div class="card question" data-correct="a"> 
+        <p>What is the worst case time complexity of merge sort?</p>
+
+        <label class="option">
+            <input type="radio" name="q1" value="a">
+           O(n log n)
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="b">
+            O(n)
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="c">
+            O(n<sup>2</sup>)
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="d">
+            O(log n)
+        </label>
+
+        <button class="submit">Submit</button>
+        <p class="result"></p>
+    </div>
+
+
+    <h2>Question 5</h2>
+
+    <div class="card question" data-correct="c"> 
+        <p>What describes "time complexity" the best?</p>
+
+        <label class="option">
+            <input type="radio" name="q1" value="a">
+           The speed of the CPU.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="b">
+            The length of the code.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="c">
+            The time taken based on the input size.
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="d">
+            A physical device used to test the speed of an algorithm.
+        </label>
+
+        <button class="submit">Submit</button>
+        <p class="result"></p>
+    </div>
+
+    <div class="learn-box">
+        <h4>Need more revision?</h4>
+        <a href="Learn.html" class="learn-button">Learn>>></a>
+        <a href="examples.html" class="learn-button">Examples of Algorithms>>></a>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Address</h3>
+            <p>Nancy Rothwell</p>
+
+            <h3>Contact</h3>
+            <a href="mailto:nurdaulet.askar@student.manchester.ac.uk">nurdaulet.askar@student.manchester.ac.uk</a>
+            <a href="mailto:">2</a>
+            <a href="mailto:">3</a>
+            <a href="mailto:">4</a>
+            <p>+44 17352 150564</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Learn</p>
+            <p>Examples</p>
+            <p>Practice</p>
+            <p>Our Experience</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Socials</h3>
+            <a href="https://github.com/SwiftkeyC" target="_blank"><img src="photos/GitHubDark.svg" data-icon-dark="photos/GitHubDark.svg" data-icon-light="photos/GitHubLight.png" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    
+    <script src="scripts/theme-toggle.js"></script>
+    <script src="scripts/practice.js"></script> <!--connects to the practice script that is used for the quiz questions-->
+</body>
+</html>

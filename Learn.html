@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compsci10 - Learn</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="photos/UoM.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">
+                <img class="brand-logo" src="photos/brand-logo.svg" data-icon-dark="photos/brand-logo.svg" data-icon-light="photos/brand-logo Ligth.svg" alt="Home">
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="Learn.html">
+                <img src="photos/BookDark.png" data-icon-dark="photos/BookDark.png" data-icon-light="photos/BookLight.png" alt="Learn">
+                <div class="learn-class">Learn</div>
+            </a>
+            <a href="Examples.html">
+                <img src="photos/BookmarkDark.png" data-icon-dark="photos/BookmarkDark.png" data-icon-light="photos/BookmarkLight.png" alt="Examples">
+                <div class="examples-class">Examples</div>
+            </a>
+            <a href="Practice.html">
+                <img src="photos/LoaderDark.png" data-icon-dark="photos/LoaderDark.png" data-icon-light="photos/LoaderLight.png" alt="Practice">
+                <div class="practice-class">Practice</div>
+            </a>
+            <a href="Our-Experience.html">
+                <img src="photos/SmileDark.png" data-icon-dark="photos/SmileDark.png" data-icon-light="photos/SmileLigt.png" alt="Our Experience">
+                <div class="experience-class">Our Experience</div>
+            </a>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 15.5C18.8 16.1 17.5 16.4 16.2 16.4C11.5 16.4 7.6 12.5 7.6 7.8C7.6 6.5 7.9 5.2 8.5 4C5.2 5.3 3 8.4 3 12C3 16.4 6.6 20 11 20C14.6 20 17.7 17.8 20 15.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 3V5.5M12 18.5V21M3 12H5.5M18.5 12H21M5.6 5.6L7.4 7.4M16.6 16.6L18.4 18.4M18.4 5.6L16.6 7.4M7.4 16.6L5.6 18.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <p class="subtitle">Computer Science Foundation Year</p>
+            <h1>Learn</h1>
+
+            <div class="card">
+                <p>
+                    In mathematics and computer science, an algorithm is a finite sequence of mathematically rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithms are used as specifications for performing calculations and data processing. More advanced algorithms can use conditionals to divert the code execution through various routes (referred to as automated decision-making) and deduce valid inferences (referred to as automated reasoning). 
+                </p>
+            </div>
+
+            <h2>Coursework Overview</h2>
+            <p class="left-text">
+                The courseworks in this module ask you to work with collections of data — lists of numbers, names, scores,
+                or records. In almost every task you will need to either <strong>locate a specific value</strong> inside
+                a collection or <strong>arrange the collection</strong> into a meaningful order before you can do anything
+                useful with it. Choosing the right algorithm affects how quickly your program runs, how much memory it uses,
+                and whether it even produces the correct answer in a reasonable time. The four algorithms below are the
+                building blocks the courseworks are designed around.
+            </p>
+
+            <h2>Searching Algorithms</h2>
+            <p class="left-text">
+                A <strong>searching algorithm</strong> answers the question: "Is this value in my list, and if so, where?"
+                We cover two approaches. Linear Search is the simplest and works on any list. Binary Search is far faster
+                but requires the list to already be sorted.
+            </p>
+
+            <details class="algo-dropdown" open>
+                <summary>Linear Search</summary>
+                <h3 style="padding-left:0;">Core Idea</h3>
+                <p>
+                    Linear Search scans every element of a list from the beginning until it either finds the target or
+                    exhausts the list. There is no trick — it is a plain left-to-right sweep.
+                </p>
+
+                <div class="step">
+                    <strong>Coursework relevance:</strong> When data is unsorted (e.g. raw user input, an unordered
+                    database result), Linear Search is often the only correct option. Many first-year courseworks give
+                    you an unsorted list and ask you to count, find, or filter values — Linear Search handles all of these.
+                </div>
+
+                <h3 style="padding-left:0;">Key Properties</h3>
+                <ul>
+                    <li><strong>Pre-requisite:</strong> None — works on any list, sorted or unsorted.</li>
+                    <li><strong>Best case:</strong> The target is the very first element — only 1 comparison needed.</li>
+                    <li><strong>Worst case:</strong> The target is last, or not present — the algorithm checks every element.</li>
+                    <li><strong>Time complexity:</strong> O(n) — performance scales linearly with list size.</li>
+                    <li><strong>Practical rule:</strong> Fine for small lists; becomes slow on lists of thousands of items.</li>
+                </ul>
+
+                <div class="step">
+                    <strong>Mental model:</strong> Imagine looking for a specific card in a shuffled deck by flipping
+                    through every card one at a time. Simple, but possibly slow.
+                </div>
+            </details>
+
+            <details class="algo-dropdown" open>
+                <summary>Binary Search</summary>
+                <h3 style="padding-left:0;">Core Idea</h3>
+                <p>
+                    Binary Search exploits the fact that a sorted list has a known structure. Instead of checking elements
+                    one by one, it looks at the <em>middle</em> element and immediately discards half the list based on
+                    whether the target is smaller or larger. It repeats this halving process until the target is found or
+                    the search space collapses to zero.
+                </p>
+
+                <div class="step">
+                    <strong>Coursework relevance:</strong> Courseworks that involve sorted data — ordered scoreboards,
+                    alphabetical name lists, ranked results — reward using Binary Search. When a task asks you to
+                    "efficiently find" a value, Binary Search is usually the expected answer.
+                </div>
+
+                <h3 style="padding-left:0;">Key Properties</h3>
+                <ul>
+                    <li><strong>Pre-requisite:</strong> The list <em>must</em> be sorted before you start.</li>
+                    <li><strong>Best case:</strong> The target is the middle element on the first check — 1 comparison.</li>
+                    <li><strong>Worst case:</strong> The list is repeatedly halved until one element remains.</li>
+                    <li><strong>Time complexity:</strong> O(log n) — doubling the list size adds only one extra comparison.</li>
+                    <li><strong>Practical rule:</strong> Dramatically faster than Linear Search on large sorted lists.</li>
+                </ul>
+
+                <div class="step">
+                    <strong>Mental model:</strong> Think of searching for a word in a dictionary. You open to the middle,
+                    decide which half contains your word, open to the middle of that half, and repeat. You never read
+                    every page.
+                </div>
+            </details>
+
+            <h2>Sorting Algorithms</h2>
+            <p class="left-text">
+                A <strong>sorting algorithm</strong> answers the question: "How do I arrange this list into order?" Sorted
+                data is easier to search, easier to display, and often required by the problem specification itself.
+                We cover two algorithms: Bubble Sort, which is easy to understand and implement, and Merge Sort, which
+                is far more efficient for large lists.
+            </p>
+
+            <details class="algo-dropdown" open>
+                <summary>Bubble Sort</summary>
+                <h3 style="padding-left:0;">Core Idea</h3>
+                <p>
+                    Bubble Sort makes repeated passes through the list. On each pass it compares neighbouring pairs of
+                    elements and swaps them if they are in the wrong order. After the first pass, the largest value has
+                    "bubbled" to the end. After the second pass, the second-largest is in place — and so on. The algorithm
+                    stops when a complete pass produces no swaps, meaning the list is fully sorted.
+                </p>
+
+                <div class="step">
+                    <strong>Coursework relevance:</strong> Bubble Sort is the algorithm most courseworks expect you to
+                    implement from scratch first, because its logic maps almost directly to pseudocode. Tasks asking you
+                    to sort a list of scores, names, or records in ascending or descending order are typically solved
+                    with Bubble Sort at the foundation level.
+                </div>
+
+                <h3 style="padding-left:0;">Key Properties</h3>
+                <ul>
+                    <li><strong>Pre-requisite:</strong> None — works on any unsorted list.</li>
+                    <li><strong>Best case:</strong> List is already sorted — one pass confirms it, no swaps performed.</li>
+                    <li><strong>Worst case:</strong> List is in reverse order — maximum number of passes and swaps needed.</li>
+                    <li><strong>Time complexity:</strong> O(n²) — for large lists, performance degrades rapidly.</li>
+                    <li><strong>Practical rule:</strong> Straightforward to write and debug; too slow for very large datasets.</li>
+                </ul>
+
+                <div class="step">
+                    <strong>Mental model:</strong> Imagine sorting a row of people by height. You walk along the row,
+                    swap any two neighbours who are out of order, then walk back to the start and repeat until nobody
+                    needs swapping.
+                </div>
+            </details>
+
+            <details class="algo-dropdown" open>
+                <summary>Merge Sort</summary>
+                <h3 style="padding-left:0;">Core Idea</h3>
+                <p>
+                    Merge Sort uses a <em>divide-and-conquer</em> strategy. It repeatedly splits the list in half until
+                    every sub-list contains only one element (a single element is trivially sorted). It then merges pairs
+                    of sorted sub-lists back together in the correct order, building up to a fully sorted list. The merge
+                    step is the key: combining two already-sorted halves into one sorted list is efficient and
+                    straightforward.
+                </p>
+
+                <div class="step">
+                    <strong>Coursework relevance:</strong> When a coursework deals with large datasets or asks you to
+                    consider <em>efficiency</em>, Merge Sort is the right tool. It also appears in questions that ask you
+                    to explain or trace a divide-and-conquer approach, and it is the conceptual basis for understanding
+                    how professional sorting libraries work.
+                </div>
+
+                <h3 style="padding-left:0;">Key Properties</h3>
+                <ul>
+                    <li><strong>Pre-requisite:</strong> None — works on any unsorted list.</li>
+                    <li><strong>Best case:</strong> O(n log n) — even a perfectly ordered list takes this many operations.</li>
+                    <li><strong>Worst case:</strong> O(n log n) — performance is consistent regardless of initial order.</li>
+                    <li><strong>Time complexity:</strong> O(n log n) — significantly faster than Bubble Sort on large lists.</li>
+                    <li><strong>Trade-off:</strong> Requires extra memory for the temporary sub-lists during merging.</li>
+                </ul>
+
+                <div class="step">
+                    <strong>Mental model:</strong> Imagine splitting a messy pile of numbered cards in half, then each
+                    half again, until you have individual cards. Then merge pairs of cards into sorted pairs, pairs into
+                    sorted groups of four, and so on — until the whole pile is sorted.
+                </div>
+            </details>
+
+            <h2>Algorithm Comparison at a Glance</h2>
+            <div class="card comparison-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Algorithm</th>
+                            <th>Type</th>
+                            <th>Requires sorted list?</th>
+                            <th>Time complexity</th>
+                            <th>Best use case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Linear Search</strong></td>
+                            <td>Searching</td>
+                            <td>No</td>
+                            <td>O(n)</td>
+                            <td>Small or unsorted lists</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Binary Search</strong></td>
+                            <td>Searching</td>
+                            <td>Yes</td>
+                            <td>O(log n)</td>
+                            <td>Large sorted lists</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bubble Sort</strong></td>
+                            <td>Sorting</td>
+                            <td>No</td>
+                            <td>O(n²)</td>
+                            <td>Simple tasks, small lists</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Merge Sort</strong></td>
+                            <td>Sorting</td>
+                            <td>No</td>
+                            <td>O(n log n)</td>
+                            <td>Large lists, efficiency required</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Address</h3>
+            <p>Nancy Rothwell</p>
+
+            <h3>Contact</h3>
+            <a href="mailto:nurdaulet.askar@student.manchester.ac.uk">nurdaulet.askar@student.manchester.ac.uk</a>
+            <p>+44 17352 150564</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Learn</p>
+            <p>Examples</p>
+            <p>Practice</p>
+            <p>Our Experience</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Socials</h3>
+            <a href="https://github.com/SwiftkeyC" target="_blank"><img src="photos/GitHubDark.svg" data-icon-dark="photos/GitHubDark.svg" data-icon-light="photos/GitHubLight.png" alt="GitHub"></a>
+        </div>
+    </footer>
+</body>
+<script src="scripts/theme-toggle.js"></script>
+</html>

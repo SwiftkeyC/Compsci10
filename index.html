@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compsci10 - Main</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="photos/UoM.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">
+                <img class="brand-logo" src="photos/brand-logo.svg" data-icon-dark="photos/brand-logo.svg" data-icon-light="photos/brand-logo Ligth.svg" alt="Home">
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="Learn.html">
+                <img src="photos/BookDark.png" data-icon-dark="photos/BookDark.png" data-icon-light="photos/BookLight.png" alt="Learn">
+                <div class="learn-class">Learn</div>
+            </a>
+            <a href="Examples.html">
+                <img src="photos/BookmarkDark.png" data-icon-dark="photos/BookmarkDark.png" data-icon-light="photos/BookmarkLight.png" alt="Examples">
+                <div class="examples-class">Examples</div>
+            </a>
+            <a href="Practice.html">
+                <img src="photos/LoaderDark.png" data-icon-dark="photos/LoaderDark.png" data-icon-light="photos/LoaderLight.png" alt="Practice">
+                <div class="practice-class">Practice</div>
+            </a>
+            <a href="Our-Experience.html">
+                <img src="photos/SmileDark.png" data-icon-dark="photos/SmileDark.png" data-icon-light="photos/SmileLigt.png" alt="Our Experience">
+                <div class="experience-class">Our Experience</div>
+            </a>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 15.5C18.8 16.1 17.5 16.4 16.2 16.4C11.5 16.4 7.6 12.5 7.6 7.8C7.6 6.5 7.9 5.2 8.5 4C5.2 5.3 3 8.4 3 12C3 16.4 6.6 20 11 20C14.6 20 17.7 17.8 20 15.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 3V5.5M12 18.5V21M3 12H5.5M18.5 12H21M5.6 5.6L7.4 7.4M16.6 16.6L18.4 18.4M18.4 5.6L16.6 7.4M7.4 16.6L5.6 18.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </nav>
+
+    <section class="hero">
+        <p class="subtitle">Computer Science Foundation Year</p>
+        <h1>Welcome to Algorithms</h1>
+
+        <section class="home-intro-row">
+            <div class="home-banner-wrap">
+                <img class="home-banner-image" src="photos/Cs-banner-v2.jpg" alt="Image of university of manchester campus">
+            </div>
+
+            <section class="learn-description home-cover-box">
+                <p>Well done for making into the prestigious University of Manchester!</p>
+                <h2>What This Website Covers</h2>
+                <p class="left-text">
+                    This website supports future students preparing for the Computer Science Foundation Year.
+                    We will be focusing on one core Computational Thinking topic: Algorithms.
+                </p>
+                <p class="left-text">
+                    You will learn how algorithms solve problems through clear, step-by-step logic.
+                    Start with the theory, study worked examples, and then test your understanding with practice questions.
+                </p>
+            </section>
+        </section>
+
+        <div class="card comparison-card">
+            <h2>Start Here</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="Learn.html">Learn</a></td>
+                        <td>Understand core concepts behind searching and sorting algorithms.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="Examples.html">Examples</a></td>
+                        <td>Follow step-by-step algorithm walkthroughs.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="Practice.html">Practice</a></td>
+                        <td>Check your progress with quick questions.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="Our-Experience.html">Our Experience</a></td>
+                        <td>Read useful tips from students who studied the course.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Address</h3>
+            <p>Nancy Rothwell</p>
+
+            <h3>Contact</h3>
+            <a href="mailto:nurdaulet.askar@student.manchester.ac.uk">nurdaulet.askar@student.manchester.ac.uk</a>
+            <p>+44 17352 150564</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Learn</p>
+            <p>Examples</p>
+            <p>Practice</p>
+            <p>Our Experience</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Socials</h3>
+            <a href="https://github.com/SwiftkeyC" target="_blank" ><img src="photos/GitHubDark.svg" data-icon-dark="photos/GitHubDark.svg" data-icon-light="photos/GitHubLight.png" alt="GitHub"></a>
+        </div>
+    </footer>
+    <script src="scripts/theme-toggle.js"></script>
+</body>
+</html>
